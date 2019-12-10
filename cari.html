@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+    <button onclick="myFunction()">Try it</button>
+    <button onclick="myFunction1()">Try it1</button>
+
+    <p id="hasil"></p>
+
+    <p id="hasil1"></p>
+
+    <script>
+        function myFunction() {
+            var str = "axhdsjk123.jpg.jpg";
+            var patt = new RegExp("123.jpg");
+            var res = patt.exec(str);
+            document.getElementById("hasil").innerHTML = res;
+
+        }
+
+        function myFunction1() {
+            var str = "hjhsd432.png.png";
+            var patt = new RegExp("432.png");
+            var res = patt.exec(str);
+            document.getElementById("hasil1").innerHTML = res;
+        }
+    </script>
+
+</body>
+
+</html>

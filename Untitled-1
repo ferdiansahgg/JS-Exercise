@@ -1,0 +1,43 @@
+
+            /* validasi  */
+            valid == true;
+            while (i <= 4 && valid == true) {
+                if (a[i] < 0 || a[i] > 100) {
+                    valid == false;
+                } else {
+                    i++;
+                }
+            }
+
+            if (valid == true) {
+
+                  } else {
+                document.getElementById("output").innerHTML = "Masukan tidak valid";
+            }
+        }
+
+        <script type="text/javascript">
+			function hitung (){
+				
+				var tampilkan = document.getElementById('nama').value;
+				var nama = document.getElementById('nama').value.length;
+
+				document.getElementById('hasil').innerHTML = ('<span style=color:red> Nama Anda : </span> ' + tampilkan + ' <br/> <span style=color:blue> Total Huruf : </span>' + nama);
+
+			}
+		</script>
+<div class="container">
+			<div class="row">
+				<legend>Form title</legend>
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for=""> NAMA ANDA </label>
+						<input type="text" class="form-control" id="nama" placeholder="Input field">
+						<span id="hasil"></span>
+					</div>
+					<button type="submit" onclick="hitung();" class="btn btn-primary">Submit</button>
+
+					
+				</div>
+			</div>
+		</div>

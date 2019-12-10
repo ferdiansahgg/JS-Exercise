@@ -1,0 +1,35 @@
+<html>
+
+<head>
+	<title>
+		Javascript
+	</title>
+</head>
+
+<body>
+	<h1>Tugas Javascript</h1>
+	<p id="tes"></p>
+	<label>Nama Depan : </label>
+	<input type="text" name="nama" id="nd"></input>
+	<br>
+	<br>
+	<label>Nama Belakang : </label>
+	<input type="text" name="nama" id="nb"></input>
+	<br>
+	<button id="btnok" onclick="Hello()">OK</button>
+	<p id="output"></p>
+
+
+	<script>
+		function Hello() {
+			var namadepan, namabelakang, hasil;
+			namadepan = document.getElementById("nd").value;
+			namabelakang = document.getElementById("nb").value;
+			var hasil = namadepan + " " + namabelakang;
+			document.getElementById("output").innerHTML = " Nama Lengkap adalah: " + hasil;
+		}
+		/*document.getElementById("txtId").innerHTML= "Nilai b adalah : "+ b; */
+	</script>
+</body>
+
+</html>

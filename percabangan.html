@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>
+		Javascript
+		</title>
+	</head>
+	<body>
+		<h1>Percabangan Javascript</h1>
+		<label> Masukan Angka : </label>
+		<input type="text" name="nama" id="nd"></input>
+		<br>
+		<br>
+		<button id="btnok" onclick="Btnclick()">OK</button>
+		<p id="output"></p>
+		<script>
+			function Btnclick()
+			{
+			var a;
+			a = Number(document.getElementById("nd").value);
+		    if(a == 0 )
+			{
+			  document.getElementById("output").innerHTML=" Ini bilangan 0";
+			} 
+			else if (a > 0)
+			{
+			  document.getElementById("output").innerHTML=" Ini bilangan positif";
+			}
+			else 
+			{
+			  document.getElementById("output").innerHTML=" Ini bilangan Negatif";
+			}
+			
+			}
+		</script>
+	</body>
+</html>
+

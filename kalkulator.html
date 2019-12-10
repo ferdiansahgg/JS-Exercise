@@ -1,0 +1,34 @@
+<html>
+
+<head>
+	<title>
+		Javascript
+	</title>
+</head>
+
+<body>
+	<h1>Tugas Javascript</h1>
+	<p id="tes"></p>
+	<label>Bilangan 1 : </label>
+	<input type="text" name="nama" id="b1"></input>
+	<br>
+	<br>
+	<label>Bilangan 2 : </label>
+	<input type="text" name="nama" id="b2"></input>
+	<br>
+	<button id="btnok" onclick="kalkulator()">OK</button>
+	<p id="output"></p>
+
+
+	<script>
+		function kalkulator() {
+			var bil1, bil2, hasil;
+			bil1 = Number(document.getElementById("b1").value);
+			bil2 = Number(document.getElementById("b2").value);
+			hasil = bil1 + bil2;
+			document.getElementById("output").innerHTML = " Hasil Penjumlahan adalah: " + hasil;
+		}
+	</script>
+</body>
+
+</html>

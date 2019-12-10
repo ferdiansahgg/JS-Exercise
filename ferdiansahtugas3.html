@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Perulangan</title>
+</head>
+
+<body>
+	<h1> Perulangan Javascript</h1>
+	<label> Masukan Nilai : </label>
+	<input type="text" name="nama" id="nd"></input>
+	<br>
+	<br>
+	<button id="btnok" onclick="Btnclick()">HITUNG</button>
+	<p id="output"></p>
+	<script>
+		function Btnclick() {
+			var i, s, n, o;
+			n = Number(document.getElementById("nd").value);
+			s = "<table border='1'> <tr><th>No</th> <th> Hasil</th>  ";
+			for (o = 1; o <= 20; o++) {
+				s = s + "<tr> <td> " + o;
+				s = s + "</td> ";
+			}
+			for (i = n; i <= 20; i++) {
+				s = s + " <td>" + i * i;
+				s = s + "</td> </tr>";
+
+			}
+
+			s = s + " </table>";
+			document.getElementById("output").innerHTML = s;
+		}
+	</script>
+
+</body>
+
+</html>

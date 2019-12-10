@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>While do</title>
+</head>
+
+<body>
+    <div id="header">
+        <h1> while do Javascript</h1>
+        <hr>
+    </div>
+    <br>
+    <label for=""> Bilangan 1 :</label>
+    <input type="text" name="" id="b1">
+    <br>
+    <br>
+    <label for=""> Bilangan 2 :</label>
+    <input type="text" name="" id="b2">
+    <br>
+    <button type="submit" onclick="Btnkpk()">Cari KPK </button>
+    <p id="output"> </p>
+    <script>
+        function Btnkpk() {
+            var i, a, b, hasil;
+            a = Number(document.getElementById("b1").value);
+            b = Number(document.getElementById("b2").value);
+            i = 1;
+
+            while ((a * i) % b != 0) {
+
+                i++;
+            }
+            hasil = a * i;
+            document.getElementById("output").innerHTML = hasil;
+        }
+    </script>
+
+</body>
+
+</html>

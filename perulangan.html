@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Perulangan</title>
+</head>
+
+<body>
+	<h1> Perulangan Javascript</h1>
+	<label> Masukan Nilai : </label>
+	<input type="text" name="nama" id="nd"></input>
+	<br>
+	<br>
+	<button id="btnok" onclick="Btnclick()">HITUNG</button>
+	<br>
+	<br>
+	<br>
+	<table>
+		<tr>
+			<th> 1</th>
+			<th> 2</th>
+			<th> 3</th>
+			<th> 4</th>
+			<th> 5</th>
+			<th> 6</th>
+			<th> 7</th>
+			<th> 8</th>
+			<th> 9</th>
+			<th> 10</th>
+		</tr>
+	</table>
+	<p id="output"></p>
+	<script>
+		function Btnclick() {
+
+			var i, s, n, o;
+			s = "<table border='2'>";
+			s = s +
+				"<tr> <th> 1 </th> <th> 2 </th> <th> 3 </th> <th> 4 </th> <th> 5 </th> <th> 6 </th> <th> 7 </th> <th> 8 </th> <th> 9 </th> <th> 10 </th>";
+			n = Number(document.getElementById("nd").value);
+			for (i = 1; i <= 10; i++) {
+				s = s + "<tr><td>" + i;
+				s = s + " </td> ";
+				for (o = n; o <= n + 10; o++) {
+					o = n * n;
+					s = s + "<td>" + o;
+					s = s + "  </td> </tr> ";
+				}
+			}
+			s = s + "</tr> </table>";
+			document.getElementById("output").innerHTML = s;
+		}
+	</script>
+
+
+</body>
+
+</html>

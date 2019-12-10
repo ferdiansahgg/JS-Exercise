@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rata-rata Nilai</title>
+</head>
+
+<body>
+    <h1> Mencari Nilai rata-rata Array Javascript</h1>
+    <p id="input"></p>
+    <p id="output"></p>
+    <button id="btn" onclick="btnclick()"> Jumlahkan</button>
+    <script>
+        var i, s;
+        s = "";
+        /*Memasukkan isi textbox ke array*/
+        for (i = 0; i <= 4; i++) {
+            s = s + "<label for='txtNum'>Masukkan Nilai Ujian ke-</label>" + i;
+            s = s + "<input type='text' id='txtNum" + i + "'> <br> <br>";
+        }
+        document.getElementById("input").innerHTML = s;
+
+        function btnclick() {
+            var a = [];
+            var i, s, mean, valid, str, jlulus, max, min;
+            s = "";
+            s = 0;
+            for (i = 0; i <= 4; i++) {
+                a[i] = Number(document.getElementById("txtNum" + i).value);
+            }
+
+
+            s = 0;
+            for (i = 0; i <= 4; i++) {
+                s = s + a[i];
+            }
+            mean = s / a.length;
+            str = "Nilai Anda : " + mean;
+            var max = Math.max.apply(null, a);
+            var min = Math.min.apply(null, a);
+            if (mean >= 60) {
+                document.getElementById("output").innerHTML = "<b> Selamat Anda lulus!!!</b> <br>" + str +
+                    "<br> Nilai Maximum : " + max + " Nilai Minimum " + min;
+
+
+            } else {
+                document.getElementById("output").innerHTML = "<b>Anda Tidak Lulus !!!</b> <br>  " + str +
+                    "<br> Nilai Maximum : " + max + " Nilai Minimum :" + min;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
