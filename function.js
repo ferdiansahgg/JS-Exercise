@@ -1,20 +1,8 @@
-//fungsi dengan cara biasa
-function helloworld() {
-    console.log("Hello World!");
+function myFunction() {
+    let a,b,c; //statments create 3 variables,
+    a = 5; // statments assign 5 to a;
+    b = 6; // statments assign 6 to b;
+    c = a + b; //statments assign sum of a and b;
+    document.getElementById("mixue").innerHTML = c;
+
 }
-//fungsi dengan cara Ekspresi
-var namafungsi = function () {
-    console.log("Hello World!");
-    //fungsi tanpa nama (Anonymous Function)
-}
-//fungsi dengan tanda panah
-//fungsi yang sering digunakan di js masa kini
-//standar penulisan ES6
-var namafungsi = () => {
-    console.log("Hello World!!");
-}
-// atau seperti ini
-var namafungsi = () => console.log("Hello World !!");
-//fungsi dengan konstruktor
-var namafungsi = new Function('console.log("Hello world");');
-//tidak direkomendasikan
